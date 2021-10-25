@@ -4,18 +4,17 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <NuxtLink to="/" class="navbar-brand">André Floquet</NuxtLink>
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button> -->
-                    
+                    </button>
                     <template v-if="!authenticated">
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <!-- <NuxtLink to="/about" class="nav-link"></NuxtLink> -->
+                                    <!-- <NuxtLink to="#" class="nav-link"></NuxtLink> -->
                                 </li>
                                 <li class="nav-item">
-                                    <!-- <NuxtLink to="/about" class="nav-link"></NuxtLink> -->
+                                    <!-- <NuxtLink to="#" class="nav-link"></NuxtLink> -->
                                 </li>
                             </ul>
                             <ul class="navbar-nav">
@@ -28,7 +27,7 @@
                             </ul>  
                         </div>
                     </template>
-                    <template v-else>
+                    <template v-if="authenticated">
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -40,7 +39,7 @@
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link">{{ user.name }}</a>
+                                    <span class="nav-link">{{ user.name }}</span>
                                 </li> 
                                 <li class="nav-item">
                                     <a href="#" @click.prevent="logout" class="nav-link">Logout</a>

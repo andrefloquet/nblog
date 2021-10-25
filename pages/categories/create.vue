@@ -1,6 +1,6 @@
 <template>
     <div class="container"> 
-        <h2>Create Category</h2>
+        <h2>Category - Create</h2>
         <hr class="mb-5">
         <form @submit.prevent="create">
             <div class="mb-3">
@@ -10,6 +10,7 @@
             </div>  
             <button type="submit" class="btn btn-primary mt-3">Create</button>        
         </form>
+        <NuxtLink class="btn btn-link mt-3" to="/categories">&lt; Back</NuxtLink>
     </div>
 </template>
 
