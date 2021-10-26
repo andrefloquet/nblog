@@ -88,10 +88,6 @@ export default {
             url: '/api/user',
             method: 'POST'
           },
-          // register: {
-          //   url: '/api/register',
-          //   method: 'POST'
-          // },
           logout: {
             url: '/api/logout',
             method: 'POST'
@@ -102,12 +98,6 @@ export default {
         },
       }
     },
-    // redirect: {
-    //   // login: '/login',
-    //   // logout: '/login',
-    //   // callback: '/login',
-    //   //home: '/',
-    // }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

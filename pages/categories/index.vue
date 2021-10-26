@@ -11,8 +11,6 @@
                     {{ category.name }}
                 </NuxtLink></h5>
                 <p class="text-muted">{{ category.created_at }} by {{ category.user.name }}</p>
-                <!-- <NuxtLink class="btn btn-primary" :to="{name: 'categories-edit', params: {id: category.id}}">Edit</NuxtLink>
-                <button @click="deleteCategory(category.id)" class="btn btn-danger">Delete</button> -->
             </div>
         </div>
     </div>

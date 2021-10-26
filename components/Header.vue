@@ -34,7 +34,7 @@
                                     <NuxtLink to="/categories" class="nav-link">Categories</NuxtLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NuxtLink to="/" class="nav-link">Posts</NuxtLink>
+                                    <NuxtLink to="/posts" class="nav-link">Posts</NuxtLink>
                                 </li>
                             </ul>
                             <ul class="navbar-nav">
@@ -64,7 +64,6 @@ export default {
     },
     methods: {
         logout() {   
-            // this.$auth.logout()
             this.$auth.logout()
             .then(() => {
                 this.$router.push('/login')

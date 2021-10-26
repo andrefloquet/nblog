@@ -10,6 +10,7 @@
                 <button @click="deleteCategory(category.id)" class="btn btn-danger">Delete</button>
             </div>
         </div>
+        <NuxtLink class="btn btn-link mt-3" to="/categories">&lt; Back</NuxtLink>
     </div>
 </template>
 
