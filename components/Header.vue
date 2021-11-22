@@ -7,7 +7,7 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <template v-if="!authenticated">
+                    <template v-if="!this.$auth.loggedIn">
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -27,7 +27,7 @@
                             </ul>  
                         </div>
                     </template>
-                    <template v-if="authenticated">
+                    <template v-if="this.$auth.loggedIn">
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -39,7 +39,7 @@
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <span class="nav-link">{{ user.name }}</span>
+                                    <span class="nav-link">{{ this.$auth.user.name }}</span>
                                 </li> 
                                 <li class="nav-item">
                                     <a href="#" @click.prevent="logout" class="nav-link">Logout</a>
@@ -54,14 +54,7 @@
 </template>
 
 <script>
-//import {mapGetters} from 'vuex'
 export default {
-    data() {
-        return {
-            authenticated: this.$auth.loggedIn,
-            user: this.$auth.user
-        }
-    },
     methods: {
         logout() {   
             this.$auth.logout()
